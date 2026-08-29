@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glaubenssatz - Transformiere Deine Überzeugungen in Realität</title>
+    <meta name="description" content="Überwinde limitierende Glaubenssätze und aktiviere Dein volles Potenzial mit Glaubenssatz - dem intelligenten Tool für Mindset-Transformation.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --secondary: #ec4899;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 16px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .cta-header {
+            background: var(--primary);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .cta-header:hover {
+            background: #4f46e5;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 8vw, 56px);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        .hero .highlight {
+            background: linear-gradient(120deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #6b7280;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #5b5ce0);
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            padding: 16px 40px;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .hero-image {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* Problem Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section h2 {
+            font-size: clamp(28px, 6vw, 44px);
+            margin-bottom: 50px;
+            text-align: center;
+            color: var(--dark);
+        }
+
+        .problem {
+            background: #fef3c7;
+            padding: 60px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .problem h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #92400e;
+        }
+
+        .problem ul {
+            list-style: none;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #78350f;
+        }
+
+        .problem li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .problem li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #ea580c;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Solution Section */
+        .solution {
+            background: #dbeafe;
+            padding: 60px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .solution h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0c4a6e;
+        }
+
+        .solution ul {
+            list-style: none;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #164e63;
+        }
+
+        .solution li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .solution li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0284c7;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            padding: 40px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            background: #ffffff;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .feature-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--light);
+            padding: 80px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 18px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-card p {
+            color: #6b7280;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .author-info h4 {
+            font-size: 16px;
+            color: var(--dark);
+            margin-bottom: 2px;
+        }
+
+        .author-info p {
+            font-size: 14px;
+            color: #9ca3af;
+            margin: 0;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+        }
+
+        .price-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 12px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+        }
+
+        .price-card h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+
+        .price-amount {
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .price-currency {
+            font-size: 24px;
+            color: #9ca3af;
+        }
+
+        .price-period {
+            color: #6b7280;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .price-features {
+            text-align: left;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .price-features li {
+            list-style: none;
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #6b7280;
+        }
+
+        .price-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Money Back Guarantee */
+        .guarantee {
+            background: #f0fdf4;
+            padding: 60px;
+            border-radius: 12px;
+            margin-bottom: 60px;
+            text-align: center;
+            border: 2px solid #86efac;
+        }
+
+        .guarantee h3 {
+            color: #166534;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .guarantee p {
+            color: #4b5563;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: var(--light);
+            padding: 80px 0;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark);
+            transition: background 0.2s ease;
+        }
+
+        .faq-question:hover {
+            background: #f9fafb;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            background: #fafbfc;
+            color: #6b7280;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(28px, 6vw, 44px);
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .final-cta .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .final-cta .btn-primary:hover {
+            background: #f0f9ff;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #374151;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            color: #d1d5db;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .problem, .solution {
+                padding: 40px;
+            }
+
+            .price-card {
+                padding: 40px 30px;
+            }
+
+            .guarantee {
+                padding: 40px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feature-card {
+            animation: slideInUp 0.5s ease-out;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+        .feature-card:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">✨ Glaubenssatz</div>
+                <a href="#pricing" class="cta-header">Jetzt starten – 37 €</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Überwinde <span class="highlight">limitierende Glaubenssätze</span><br>und aktiviere Dein volles Potenzial</h1>
+            <p>Die meisten Menschen scheitern nicht an ihren Zielen – sie scheitern an ihren Überzeugungen. Glaubenssatz transformiert die Gedanken, die Dich zurückhalten, in die Überzeugungen, die Dich nach vorn bringen.</p>
+            <div class="hero-buttons">
+                <a href="#pricing" class="btn-primary">Jetzt 30 Tage testen</a>
+                <button class="btn-secondary" onclick="document.getElementById('demo').scrollIntoView({behavior: 'smooth'})">Demo anschauen</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Das Problem: Limitierende Glaubenssätze</h2>
+
+            <div class="problem">
+                <h3>❌ Du kämpfst mit:</h3>
+                <ul>
+                    <li>Innerer Kritiker, der Dir sagt „Du schaffst das nicht"</li>
+                    <li>Selbstzweifel, die Deine Ziele sabotieren</li>
+                    <li>Unbewussten Überzeugungen, die Dich im Kreis drehen lassen</li>
+                    <li>Angst vor Versagen und Ablehnung</li>
+                    <li>Fehlender Klarheit über Deine wahren Fähigkeiten</li>
+                    <li>Wiederholten Mustern, aus denen Du nicht ausbrechen kannst</li>
+                </ul>
+            </div>
+
+            <div class="solution">
+                <h3>✓ So ändert sich alles mit Glaubenssatz:</h3>
+                <ul>
+                    <li>Identifiziere die Glaubenssätze, die Dich sabotieren</li>
+                    <li>Verstehe die Wurzeln Deiner limitierenden Überzeugungen</li>
+                    <li>Transformiere negative Überzeugungen in empowernde Gedanken</li>
+                    <li>Installiere neue, unterstützende Glaubenssätze</li>
+                    <li>Erlebe messbare Veränderungen in Deinem Leben</li>
+                    <li>Breche alte Muster auf und schaffe neue Realitäten</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Warum Glaubenssatz funktioniert</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Zielgerichtete Transformation</h3>
+                    <p>Personalisierte Übungen, die speziell auf Deine Glaubenssätze ausgerichtet sind – nicht generisch, sondern auf DICH zugeschnitten.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h3>Wissenschaftlich Fundiert</h3>
+                    <p>Basiert auf Neurowissenschaften, Psychologie und bewährten Coaching-Methoden für nachhaltige Veränderungen.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Messbare Fortschritte</h3>
+                    <p>Track Deine Entwicklung mit detaillierten Analysen und sieh mit konkreten Daten, wie Du Dich transformierst.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Nur 15 Minuten pro Tag</h3>
+                    <p>Kurze, intensive Sessions, die Du leicht in Deinen Alltag integrieren kannst – ohne großen Zeitaufwand.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Privat & Sicher</h3>
+                    <p>Deine inneren Prozesse sind 100% privat. Keine Datenweitergabe, vollständige Kontrolle über Deine Informationen.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Sofortige Ergebnisse</h3>
+                    <p>Viele berichten bereits nach der ersten Woche von Veränderungen in ihrem Denken, Fühlen und Handeln.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="section" id="demo">
+        <div class="container">
+            <h2>Wie funktioniert Glaubenssatz?</h2>
+            <div style="text-align: center; padding: 40px; background: var(--light); border-radius: 12px; margin-top: 40px;">
+                <p style="font-size: 18px; color: #6b7280; margin-bottom: 20px;">In 3 einfachen Schritten zu Deinem Transformation:</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <div>
+                        <div style="font-size: 48px; margin-bottom: 15px;">1️⃣</div>
+                        <h3 style="margin-bottom: 10px;">Erkenne</h3>
+                        <p>Identifiziere Deine limitierenden Glaubenssätze durch gezielte Fragen und Analysen.</p>
+                    </div>
+                    <div>
+                        <div style="font-size: 48px; margin-bottom: 15px;">2️⃣</div>
+                        <h3 style="margin-bottom: 10px;">Verstehe</h3>
+                        <p>Erkenne die Ursprünge und Muster Deiner Überzeugungen mit wissenschaftlichen Insights.</p>
+                    </div>
+                    <div>
+                        <div style="font-size: 48px; margin-bottom: 15px;">3️⃣</div>
+                        <h3 style="margin-bottom: 10px;">Transformiere</h3>
+                        <p>Installiere neue, empowernde Glaubenssätze durch tägliche Übungen und Affirmationen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Das sagen Nutzer über Glaubenssatz</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Nach nur 2 Wochen mit Glaubenssatz habe ich gemerkt, wie sich mein innerer Dialog verändert. Ich zweifle nicht mehr an mir selbst und bin viel produktiver geworden. Einfach genial!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah M.</h4>
+                            <p>Unternehmerin</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Ich wusste gar nicht, wie sehr meine Glaubenssätze mich zurückhalten. Glaubenssatz hat mir die Augen geöffnet und echte Werkzeuge gegeben, um sie zu verändern. Großartig!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TK</div>
+                        <div class="author-info">
+                            <h4>Thomas K.</h4>
+                            <p>Coach & Mentor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Das beste Investment für meine persönliche Entwicklung! Die täglichen Übungen sind kurz, aber absolut wirkungsvoll. Mein Selbstvertrauen ist durch die Decke gegangen."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LB</div>
+                        <div class="author-info">
+                            <h4>Lisa B.</h4>
+                            <p>Freiberuflerin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Einfache, transparente Preisgestaltung</h2>
+
+            <div class="price-card">
+                <h3>Glaubenssatz Pro</h3>
+                <div style="margin-top: 30px;">
+                    <span class="price-amount">37</span><span class="price-currency">€</span>
+                </div>
+                <div class="price-period">Einmalige Investition – auf Lebenszeit Zugriff</div>
+
+                <ul class="price-features">
+                    <li>Unbegrenzter Zugriff auf alle Features</li>
+                    <li>Personalisierte Glaubenssatz-Analysen</li>
+                    <li>15-Minuten-Daily Transformation Sessions</li>
+                    <li>Wissenschaftlich fundierte Techniken</li>
+                    <li>Progress Tracking & Analyse</li>
+                    <li>Kostenlose Updates & neue Features</li>
+                    <li>Premium Support Community</li>
+                    <li>Lebenslanger Zugang</li>
+                </ul>
+
+                <a href="#checkout" class="btn-primary" style="width: 100%; margin-bottom: 20px;">Jetzt kaufen – 37 €</a>
+                <p style="color: #9ca3af; font-size: 14px;">30 Tage Geld-zurück-Garantie. Keine Fragen gestellt.</p>
+            </div>
+
+            <div class="guarantee">
+                <h3>🎁 30-Tage Geld-zurück-Garantie</h3>
+                <p>Wenn Du Glaubenssatz nicht liebst, bekommst Du 100% Dein Geld zurück. Kein Risiko, volle Rückerstattung – so einfach ist das. Wir sind überzeugt, dass Du die Transformation lieben wirst.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Häufig gestellte Fragen</h2>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Wie lange dauert es, bis ich Ergebnisse sehe?</span>
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Viele Nutzer berichten bereits nach 3-7 Tagen von Veränderungen in ihrem inneren Dialog und ihrem Selbstvertrauen. Für tiefergehende Transformationen empfehlen wir 30 Tage kontinuierliche Nutzung. Die Ergebnisse sind kumulativ – je länger Du nutzst, desto stärker die Effekte.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Ist Glaubenssatz für Anfänger geeignet?</span>
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolut! Glaubenssatz wurde speziell so gestaltet, dass es für Menschen aller Erfahrungsstufen zugänglich ist. Du brauchst keine Vorkenntnisse. Die Anleitung ist klar und intuitive – einfach starten und den Prozess folgen.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Was ist im Paket enthalten?</span>
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Du erhältst Zugriff auf alle Features: personalisierte Analysen, tägliche Transformation Sessions, Fortschritts-Tracking, wissenschaftliche Techniken, Community-Support und alle zukünftigen Updates. Es ist eine einmalige Zahlung mit lebenslangem Zugriff.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Wie funktioniert die 30-Tage Garantie?</span>
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Ganz einfach: Wenn Du mit Glaubenssatz nicht zufrieden bist, schreib uns innerhalb von 30 Tagen eine E-Mail. Wir erstatten Dir 100% Deinen Kaufpreis – keine Fragen, kein Stress. Du trägst kein Risiko.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Welche Zahlungsmethoden akzeptiert ihr?</span>
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Wir akzeptieren alle gängigen Zahlungsmethoden: Kreditkarte (Visa, Mastercard, American Express), PayPal, und Überweisung. Die Zahlung ist sicher verschlüsselt.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Kann ich mit mehreren Personen ein Konto teilen?</span>
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Glaubenssatz ist für Deinen persönlichen Gebrauch lizenziert. Für Teamlizenzen oder Mehrplatz-Lösungen kontaktier uns bitte direkt. Wir bieten spezielle Pakete für Coaches, Organisationen und Teams an.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Starte Deine Transformation heute</h2>
+            <p>Die einzige Grenze ist der Glaube an Dich selbst. Ändere Deine Glaubenssätze, ändere Dein Leben.</p>
+            <a href="#pricing" class="btn-primary">Jetzt 37 € investieren</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Glaubenssatz. Alle Rechte vorbehalten.</p>
+            <div class="footer-links">
+                <a href="#privacy">Datenschutz</a>
+                <a href="#terms">Nutzungsbedingungen</a>
+                <a href="mailto:support@glaubenssatz.app">Kontakt</a>
+                <a href="#about">Über uns</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isActive = answer.classList.contains('active');
+
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer.active').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.textContent = item.previousElementSibling.textContent.replace('−', '+');
+                }
+            });
+
+            // Toggle current FAQ
+            if (isActive) {
+                answer.classList.remove('active');
+                element.textContent = element.textContent.replace('−', '+');
+            } else {
+                answer.classList.add('active');
+                element.textContent = element.textContent.replace('+', '−');
+            }
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
