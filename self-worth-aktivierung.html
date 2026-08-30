@@ -147,6 +147,13 @@
   .nav-buttons .btn-prev:hover { background: #aaa; }
   .nav-buttons .btn-next { background: var(--accent); color: #fff; }
 
+  .test-result { margin-top: 30px; padding: 20px; border-radius: 4px; text-align: center; }
+  .test-result.valid { background: rgba(76, 175, 80, 0.1); border: 1px solid #4CAF50; color: #2e7d32; }
+  .test-result.invalid { background: rgba(244, 67, 54, 0.1); border: 1px solid #f44336; color: #c62828; }
+
+  .o-ring-image { max-width: 300px; margin: 30px auto; text-align: center; }
+  .o-ring-image svg { width: 100%; max-width: 250px; }
+
   .progress-bar {
     height: 4px; background: var(--line); border-radius: 2px; margin-bottom: 30px;
   }
@@ -290,6 +297,72 @@
         </div>
       </div>
 
+      <!-- Step 3.5: O-Ring Test -->
+      <div class="tool-step" data-step="3.5">
+        <span class="step-num">Schritt 3.5</span>
+        <h3 class="step-title">Teste deine neue Wahrheit mit dem O-Ring Test</h3>
+        <p class="step-description">Nicht jeder Satz ist für dein Unterbewusstsein stimmig. Der O-Ring Test zeigt dir, ob deine neue Wahrheit AUTHENTISCH ist.</p>
+
+        <div class="o-ring-image">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Hand outline -->
+            <g fill="none" stroke="#1a1410" stroke-width="2">
+              <!-- Palm -->
+              <ellipse cx="100" cy="120" rx="40" ry="50"/>
+              <!-- Thumb -->
+              <path d="M 70 110 Q 50 100 45 80"/>
+              <!-- Index finger -->
+              <path d="M 85 60 L 80 20"/>
+              <!-- Middle finger -->
+              <path d="M 100 50 L 100 10"/>
+              <!-- Ring finger -->
+              <path d="M 115 60 L 125 20"/>
+              <!-- Pinky -->
+              <path d="M 130 110 Q 150 100 155 80"/>
+            </g>
+
+            <!-- O-Ring (Daumen + Zeigefinger) -->
+            <g fill="none" stroke="#E87722" stroke-width="3">
+              <circle cx="75" cy="85" r="15"/>
+            </g>
+
+            <!-- Text -->
+            <text x="100" y="170" font-size="12" text-anchor="middle" fill="#1a1410" font-family="'Cormorant Garamond', serif">
+              Daumen + Zeigefinger = O
+            </text>
+          </svg>
+        </div>
+
+        <div style="background: var(--bg-soft); border-radius: 4px; padding: 25px; margin: 30px 0;">
+          <h4 style="font-family: 'Cinzel', serif; font-size: 16px; margin-bottom: 16px;">Wie der O-Ring Test funktioniert:</h4>
+          <ol style="font-size: 16px; line-height: 1.8; color: var(--ink-dim); margin-left: 20px;">
+            <li><strong>Bilde einen O-Ring:</strong> Daumen und Zeigefinger bilden einen Kreis (wie in der Grafik)</li>
+            <li><strong>Sprich deinen Satz:</strong> Sag laut: „${document.getElementById('new-truth')?.value || 'Ich bin wertvoll'}"</li>
+            <li><strong>Teste die Stabilität:</strong> Mit der anderen Hand versuch, deinen O-Ring auseinanderzuziehen</li>
+            <li><strong>Beobachte die Antwort:</strong>
+              <ul style="margin-top: 10px;">
+                <li>✅ <strong>Ring bleibt stabil:</strong> Deine Wahrheit ist authentisch! Weiter zu Schritt 4.</li>
+                <li>❌ <strong>Ring öffnet sich leicht:</strong> Dein Unterbewusstsein stimmt noch nicht zu. Geh zurück zu Schritt 3 und wähle einen anderen Satz.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+        <div class="form-group">
+          <label>Hast du den Test gemacht?</label>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;">
+            <button class="cta-button" onclick="testResult('valid')" style="background: #4CAF50; padding: 16px;">
+              ✅ Mein Ring ist stabil — es ist authentisch!
+            </button>
+            <button class="cta-button" onclick="testResult('invalid')" style="background: #f44336; padding: 16px;">
+              ❌ Mein Ring öffnet sich — nicht stimmig
+            </button>
+          </div>
+        </div>
+
+        <div class="test-result" id="test-result-box" style="display: none;"></div>
+      </div>
+
       <!-- Step 4 -->
       <div class="tool-step" data-step="4">
         <span class="step-num">Schritt 4</span>
@@ -369,25 +442,55 @@
 <script>
   let currentStep = 1;
   const totalSteps = 5;
+  const stepSequence = [1, 2, 3, 3.5, 4, 5];
 
   function showStep(step) {
     document.querySelectorAll('.tool-step').forEach(el => el.classList.remove('active'));
     document.querySelector(`[data-step="${step}"]`).classList.add('active');
 
-    const progress = (step / totalSteps) * 100;
+    // Progress basierend auf actualStep Position
+    const stepIndex = stepSequence.indexOf(step);
+    const progress = ((stepIndex + 1) / stepSequence.length) * 100;
     document.getElementById('progressFill').style.width = progress + '%';
 
     document.querySelector('.btn-prev').style.display = step > 1 ? 'block' : 'none';
-    document.querySelector('.btn-next').textContent = step === totalSteps ? 'Fertig ✓' : 'Weiter →';
+    document.querySelector('.btn-next').textContent = step === 5 ? 'Fertig ✓' : 'Weiter →';
 
     if (step === 5) {
       updateSummary();
     }
   }
 
+  function testResult(result) {
+    const resultBox = document.getElementById('test-result-box');
+
+    if (result === 'valid') {
+      resultBox.className = 'test-result valid';
+      resultBox.innerHTML = '<strong>✅ Perfekt!</strong> Deine neue Wahrheit ist authentisch für dein Unterbewusstsein. Dein ICH BIN Gebet wird wirksam sein.';
+      resultBox.style.display = 'block';
+
+      setTimeout(() => {
+        currentStep = 4;
+        showStep(4);
+        document.querySelector('.tool-container').scrollIntoView({behavior: 'smooth', block: 'center'});
+      }, 1500);
+    } else {
+      resultBox.className = 'test-result invalid';
+      resultBox.innerHTML = '<strong>❌ Das ist wertvoll!</strong> Dein Unterbewusstsein sagt: Diese Wahrheit passt noch nicht. Geh zurück zu Schritt 3 und wähle einen Satz, der sich echter anfühlt.';
+      resultBox.style.display = 'block';
+
+      setTimeout(() => {
+        currentStep = 3;
+        showStep(3);
+        document.querySelector('.tool-container').scrollIntoView({behavior: 'smooth', block: 'center'});
+      }, 1500);
+    }
+  }
+
   function nextStep() {
-    if (currentStep < totalSteps) {
-      currentStep++;
+    const stepIndex = stepSequence.indexOf(currentStep);
+    if (stepIndex < stepSequence.length - 1) {
+      currentStep = stepSequence[stepIndex + 1];
       showStep(currentStep);
       document.querySelector('.tool-container').scrollIntoView({behavior: 'smooth', block: 'center'});
     } else if (currentStep === totalSteps) {
@@ -396,8 +499,9 @@
   }
 
   function prevStep() {
-    if (currentStep > 1) {
-      currentStep--;
+    const stepIndex = stepSequence.indexOf(currentStep);
+    if (stepIndex > 0) {
+      currentStep = stepSequence[stepIndex - 1];
       showStep(currentStep);
       document.querySelector('.tool-container').scrollIntoView({behavior: 'smooth', block: 'center'});
     }
@@ -428,10 +532,6 @@
     document.getElementById('summary').innerHTML = summary;
   }
 
-  function handlePayment() {
-    alert('Zahlungsseite öffnet sich. (PayPal Integration wird hier eingefügt)');
-    // Hier später PayPal Button integrieren
-  }
 
   // Initialize
   showStep(1);
