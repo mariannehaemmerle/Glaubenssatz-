@@ -66,24 +66,38 @@ Marianne möchte sich nicht nur auf 1:1 beschränken, sondern:
 
 ---
 
+## Die Kernvision: Tools mit Begeisterung verkaufen
+
+**Mariannes primäre Leidenschaft:**
+> "Am liebsten wäre mir, meine Tools, die ich mit Begeisterung erstelle, **vielfach zu verkaufen**"
+
+Das ist nicht "1:1 Arbeit mit ein paar Apps als Zusatz"  
+Das ist: **Tools sind der Fokus. Apps sind die Haupteinnahmequelle.**
+
+---
+
 ## Das Ideal-Modell (forward-looking)
 
 ### Phase 1: Jetzt
-- 1:1 Arbeit mit ausgewählten Kundinnen (70€+/Stunde)
-- Aufbau der Online-Präsenz
-- Launch des ersten digitalen Produkts (Glaubenssatz-Auflöser, 37€)
+- Glaubenssatz-Auflöser Tool (37€) launchen & skalieren
+- Aufbau der Online-Präsenz für Sichtbarkeit
+- 1:1 Arbeit als "Nebengeschäft" oder Testfeld (lernen, was wirkt)
+- Inspiration für neue Tools sammeln
 
-### Phase 2: Skalierung
-- Mehrere Apps im Angebot
-- Passive Income durch digitale Produkte
-- Selektive 1:1 Betreuung (nur mit Kundinnen, die resonieren)
-- Eventuell: Online-Gruppen, Mastermind-Gruppen
+### Phase 2: Skalierung (PRIMARY FOCUS)
+- **Portfolio von mehreren Apps**
+  - Jede App adressiert ein spezifisches Problem
+  - Skalierbare, digitale, automatisierte Lösungen
+  - Vielfach verkauft = passives & semi-passives Income
+- Weniger 1:1 Arbeit (nur bei Interesse)
+- Starke Content-Strategie (Social Media zeigt Tool-Effektivität)
 
-### Phase 3: Präsenz
-- Bekannt als führende Expertin für Glaubenssatz-Auflösung
-- Starke Community auf allen Kanälen
-- Apps als Standard-Referenz für Transformation
-- 1:1 Arbeit als exklusives Premium-Angebot
+### Phase 3: Etabliert
+- Bekannt als **Tool-Schöpferin** (nicht nur Coach)
+- App-Portfolio ist Haupteinnahmequelle
+- Community der Tool-User ist größer als 1:1 Kundinnen
+- 1:1 Arbeit ist optional (nur mit wirklich resonierenden Kundinnen)
+- Könnte eigene App-Creator-Academy gründen
 
 ---
 
