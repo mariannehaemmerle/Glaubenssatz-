@@ -6,6 +6,11 @@ command = "echo 'Static site - no build needed'"
 from = "/*"
 to = "/index.html"
 status = 200
+# Exclude static HTML files from redirect
+[[redirects]]
+from = "/self-worth-aktivierung.html"
+to = "/self-worth-aktivierung.html"
+status = 200
 
 [context.production]
 environment = { NODE_ENV = "production" }
