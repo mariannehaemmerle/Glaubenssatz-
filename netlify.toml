@@ -2,14 +2,16 @@
 publish = "."
 command = "echo 'Static site - no build needed'"
 
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
-# Exclude static HTML files from redirect
+# Exclude specific HTML files from SPA redirect (must be BEFORE catch-all)
 [[redirects]]
 from = "/self-worth-aktivierung.html"
 to = "/self-worth-aktivierung.html"
+status = 200
+
+# Catch-all for SPA (AFTER specific routes)
+[[redirects]]
+from = "/*"
+to = "/index.html"
 status = 200
 
 [context.production]
