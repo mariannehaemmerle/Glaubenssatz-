@@ -304,69 +304,78 @@
         <p class="step-description">Nicht jeder Satz ist für dein Unterbewusstsein stimmig. Der O-Ring Test zeigt dir, ob deine neue Wahrheit AUTHENTISCH ist.</p>
 
         <div class="o-ring-image">
-          <svg viewBox="0 0 280 320" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 320 360" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="handGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#f7f2e7;stop-opacity:1" />
-                <stop offset="100%" style="stop-color:#efe6d3;stop-opacity:1" />
-              </linearGradient>
-              <filter id="shadow">
-                <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+              <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+                <feOffset dx="0" dy="8" result="offsetblur"/>
+                <feComponentTransfer>
+                  <feFuncA type="linear" slope="0.2"/>
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
               </filter>
+              <linearGradient id="skinGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#F5DEB3;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#E8D5B7;stop-opacity:1" />
+              </linearGradient>
             </defs>
 
-            <!-- Hand base -->
-            <g filter="url(#shadow)">
-              <!-- Palm -->
-              <ellipse cx="140" cy="180" rx="48" ry="65" fill="#f7f2e7" stroke="#b8862a" stroke-width="1.5"/>
+            <!-- Background circle -->
+            <circle cx="160" cy="140" r="130" fill="#efe6d3" opacity="0.4"/>
 
-              <!-- Thumb -->
-              <g>
-                <ellipse cx="88" cy="150" rx="18" ry="28" fill="#f7f2e7" stroke="#b8862a" stroke-width="1.5" transform="rotate(-35 88 150)"/>
-              </g>
+            <!-- Hand group -->
+            <g filter="url(#softShadow)">
+              <!-- Wrist/Palm base -->
+              <ellipse cx="160" cy="180" rx="52" ry="70" fill="url(#skinGradient)" stroke="#D4A574" stroke-width="2"/>
 
-              <!-- Index finger (forming O) -->
-              <g>
-                <ellipse cx="105" cy="95" rx="16" ry="45" fill="#f7f2e7" stroke="#b8862a" stroke-width="1.5"/>
-              </g>
+              <!-- Thumb (left) -->
+              <path d="M 110 160 Q 85 145 80 115" fill="none" stroke="url(#skinGradient)" stroke-width="20" stroke-linecap="round"/>
+              <ellipse cx="80" cy="115" rx="12" ry="16" fill="url(#skinGradient)" stroke="#D4A574" stroke-width="1.5"/>
+
+              <!-- Index finger (part of O-Ring) -->
+              <path d="M 125 120 Q 115 85 118 35" fill="none" stroke="url(#skinGradient)" stroke-width="18" stroke-linecap="round"/>
+              <ellipse cx="118" cy="35" rx="11" ry="14" fill="url(#skinGradient)" stroke="#D4A574" stroke-width="1.5"/>
 
               <!-- Middle finger -->
-              <g>
-                <ellipse cx="140" cy="70" rx="15" ry="55" fill="#f7f2e7" stroke="#b8862a" stroke-width="1.5"/>
-              </g>
+              <path d="M 160 100 L 160 15" fill="none" stroke="url(#skinGradient)" stroke-width="18" stroke-linecap="round"/>
+              <ellipse cx="160" cy="15" rx="11" ry="14" fill="url(#skinGradient)" stroke="#D4A574" stroke-width="1.5"/>
 
               <!-- Ring finger -->
-              <g>
-                <ellipse cx="175" cy="85" rx="15" ry="48" fill="#f7f2e7" stroke="#b8862a" stroke-width="1.5"/>
-              </g>
+              <path d="M 195 120 Q 205 85 202 35" fill="none" stroke="url(#skinGradient)" stroke-width="18" stroke-linecap="round"/>
+              <ellipse cx="202" cy="35" rx="11" ry="14" fill="url(#skinGradient)" stroke="#D4A574" stroke-width="1.5"/>
 
-              <!-- Pinky finger -->
-              <g>
-                <ellipse cx="202" cy="125" rx="13" ry="40" fill="#f7f2e7" stroke="#b8862a" stroke-width="1.5" transform="rotate(25 202 125)"/>
-              </g>
+              <!-- Pinky finger (right) -->
+              <path d="M 210 160 Q 235 145 240 115" fill="none" stroke="url(#skinGradient)" stroke-width="18" stroke-linecap="round"/>
+              <ellipse cx="240" cy="115" rx="12" ry="16" fill="url(#skinGradient)" stroke="#D4A574" stroke-width="1.5"/>
             </g>
 
-            <!-- O-Ring Circle (Daumen + Zeigefinger) - emphasized -->
-            <circle cx="102" cy="125" r="28" fill="none" stroke="#E87722" stroke-width="4" stroke-dasharray="8,4" opacity="0.8"/>
-            <circle cx="102" cy="125" r="28" fill="none" stroke="#E87722" stroke-width="2"/>
+            <!-- O-Ring Circle (emphasized highlight) -->
+            <g>
+              <!-- Outer glow -->
+              <circle cx="100" cy="100" r="38" fill="none" stroke="#E87722" stroke-width="1" opacity="0.3"/>
+              <!-- Main ring -->
+              <circle cx="100" cy="100" r="35" fill="none" stroke="#E87722" stroke-width="4"/>
+              <!-- Highlight -->
+              <circle cx="100" cy="100" r="35" fill="none" stroke="#FF9933" stroke-width="2" opacity="0.6" stroke-dasharray="5,8"/>
+            </g>
 
-            <!-- O-Ring Label with arrow -->
-            <line x1="102" y1="158" x2="102" y2="185" stroke="#E87722" stroke-width="2" marker-end="url(#arrowhead)"/>
-            <defs>
-              <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-                <polygon points="0 0, 10 3, 0 6" fill="#E87722" />
-              </marker>
-            </defs>
+            <!-- Checkmark inside O-Ring -->
+            <g transform="translate(100, 100)">
+              <path d="M -12 0 L -5 8 L 12 -8" fill="none" stroke="#E87722" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+            </g>
 
-            <!-- Descriptive text -->
-            <text x="140" y="245" font-size="14" text-anchor="middle" fill="#1a1410" font-family="'Cinzel', serif" font-weight="600">
-              O-Ring Test
+            <!-- Label and description -->
+            <text x="160" y="290" font-size="18" text-anchor="middle" fill="#1a1410" font-family="'Cinzel', serif" font-weight="600" letter-spacing="1">
+              O-RING TEST
             </text>
-            <text x="140" y="270" font-size="12" text-anchor="middle" fill="#b8862a" font-family="'Cormorant Garamond', serif">
-              Daumen + Zeigefinger bilden einen Kreis
+            <text x="160" y="315" font-size="14" text-anchor="middle" fill="#b8862a" font-family="'Cormorant Garamond', serif" font-weight="500">
+              Der Authentizitäts-Muskeltest
             </text>
-            <text x="140" y="290" font-size="11" text-anchor="middle" fill="#1a1410" font-family="'Cormorant Garamond', serif" opacity="0.7">
-              Teste die Stabilität mit deiner anderen Hand
+            <text x="160" y="340" font-size="12" text-anchor="middle" fill="#1a1410" font-family="'Cormorant Garamond', serif" opacity="0.7">
+              Dein Unterbewusstsein sagt JA oder NEIN
             </text>
           </svg>
         </div>
